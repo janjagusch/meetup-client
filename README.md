@@ -1,6 +1,6 @@
 # meetup-client
 
-A Meetup API test.
+A Python client for the Meetup API.
 
 ## Installation
 
