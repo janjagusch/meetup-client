@@ -1,0 +1,13 @@
+#!/usr/bin/env sh
+#
+# This script checks whether the most recent version in CHANGELOG.md corresponds to
+# the version in pyproject.toml.
+
+set -e
+
+changelog_version=$(sed '3q;d' CHANGELOG.md \
+    | sed 's/^.*[^0-9]\([0-9]*\.[0-9]*\.[0-9]*[^"]*\).*$/\1/')
+
+package_version=$(cat pyproject.toml | grep ^version | sed 's/^.*[^0-9]\([0-9]*\.[0-9]*\.[0-9]*[^"]*\).*$/\1/')
+
+if [ "${changelog_version}" != "${package_version}" ]; then (echo "ERROR: Version mismatch between CHANGELOG.md and pyproject.toml: (${changelog_version} != ${package_version})"; exit 1) fi;

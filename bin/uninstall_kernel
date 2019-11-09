@@ -1,0 +1,5 @@
+#!/bin/bash
+#
+# This script uninstalls the virtual environment kernel from Jupyter.
+
+echo y | jupyter kernelspec uninstall meetup_client
