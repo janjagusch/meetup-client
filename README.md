@@ -48,7 +48,7 @@ You can also define the client scope, using the `scopes` argument. Valid scopes 
 
 ## Examples
 
-
+Please take a look at the [examples](notebooks/examples.py). You can convert this into a Jupyter notebook, using [jupytext](https://github.com/mwouts/jupytext).
 
 ## Changelog
 
