@@ -8,11 +8,6 @@ stages:
   - name: deploy
     if: tag IS present
 
-cache:
-  pip: true
-  directories:
-    - "$HOME/.cache/pre-commit"
-
 jobs:
   include:
     - stage: lint
@@ -46,7 +41,7 @@ deploy:
   script: poetry publish
   skip_cleanup: true
   on:
-    all_branches: true  # Travis recognizes tag names as "branches"
+    all_branches: true # Travis recognizes tag names as "branches"
     condition: $TRAVIS_BUILD_STAGE_NAME = Deploy
     repo: daltonmaag/statmake
     tags: true
