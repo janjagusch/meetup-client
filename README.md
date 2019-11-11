@@ -1,6 +1,6 @@
 # meetup-client
 
-[![Build Status](https://travis-ci.org/janjagusch/meetup-client.svg?branch=master)](https://travis-ci.org/janjagusch/meetup-client)
+[![Build Status](https://travis-ci.org/janjagusch/meetup-client.svg?branch=master)](https://travis-ci.org/janjagusch/meetup-client) [![codecov](https://codecov.io/gh/janjagusch/meetup-client/branch/master/graph/badge.svg)](https://codecov.io/gh/janjagusch/meetup-client)
 
 A Python client for the [Meetup API](https://www.meetup.com/meetup_api/) that supports [OAuth 2](https://www.meetup.com/meetup_api/auth/#oauth2) authentification.
 
