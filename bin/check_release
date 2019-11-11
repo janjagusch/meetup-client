@@ -7,6 +7,6 @@ set -e
 
 package_version=$(cat pyproject.toml | grep ^version | sed 's/^.*[^0-9]\([0-9]*\.[0-9]*\.[0-9]*[^"]*\).*$/\1/')
 
-release_version="${CI_COMMIT_REF_NAME}"
+release_version="${TRAVIS_TAG}"
 
 if [ "${package_version}" != "${release_version}" ]; then (echo "ERROR: Version mismatch (${package_version} != ${release_version})"; exit 1) fi;
