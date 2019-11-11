@@ -1,4 +1,4 @@
-          [tool.poetry]
+                    [tool.poetry]
 name = "meetup-client"
 version = "0.1.0"
 description = "A Python client for the Meetup API."
@@ -19,6 +19,7 @@ codecov = "^2.0"
 ipykernel = "^5"
 pylint = "^2"
 pytest = "^5"
+pytest-cov = "^2.8"
 python-dotenv = "^0.10.3"
 tox = "^3"
 
