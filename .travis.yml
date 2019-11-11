@@ -27,8 +27,12 @@ jobs:
       script:
         - make lint
     - stage: test
+      python:
+        - "3.7"
+        - "3.8"
       script:
-        - make test
+        - poetry run pytest --cov=meetup_client --cov-report term-missing tests/
+        - poetry run codecov
     - stage: deploy
       script:
         - echo Deploying to PyPI...
