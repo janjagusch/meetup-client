@@ -8,20 +8,23 @@ stages:
   - name: deploy
     if: tag IS present
 
+cache:
+  paths:
+    - .venv
+
+before_install:
+  - curl -sSL https://raw.githubusercontent.com/sdispater/poetry/master/get-poetry.py | python
+
+install:
+  - poetry config settings.virtualenvs.in-project true
+  - poetry install -v
+
 jobs:
   include:
     - stage: lint
-      install:
-        - pip install --upgrade pip
-        - pip install poetry
-        - poetry install -v
       script:
         - make lint
     - stage: test
-      install:
-        - pip install --upgrade pip
-        - pip install poetry
-        - poetry install -v
       script:
         - make test
     - stage: deploy
@@ -29,19 +32,14 @@ jobs:
         - echo Deploying to PyPI...
 
 before_deploy:
-  # User and password environment variables are set as hidden variables through
-  # the web interface in the project settings.
-  - pip install --upgrade pip
-  - pip install poetry
   - poetry config http-basic.pypi $PYPI_USERNAME $PYPI_PASSWORD
-  - poetry build
+  - poetry build -f sdist
 
 deploy:
   provider: script
   script: poetry publish
   skip_cleanup: true
   on:
-    all_branches: true # Travis recognizes tag names as "branches"
+    all_branches: true
     condition: $TRAVIS_BUILD_STAGE_NAME = Deploy
-    repo: daltonmaag/statmake
     tags: true
