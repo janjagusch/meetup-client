@@ -1,6 +1,3 @@
-.PHONY: download_pylintrc clean test tox black lint_black lint_pylint
-
-	
 ## downloading pylintrc
 pylintrc_download:
 	@echo "Downloading .pylintrc ..."
@@ -68,13 +65,3 @@ jupyter_install_kernel:
 jupyter_uninstall_kernel:
 	@echo "Uninstalling Jupyter kernel ..."
 	@bin/uninstall_kernel
-
-## installing with poetry
-poetry_install:
-	@echo "Poetry installing ..."
-	@poetry install
-
-## updating with poetry
-poetry_update:
-	@echo "Poetry updating ..."
-	@poetry update
