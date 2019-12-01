@@ -1,0 +1,68 @@
+interactions:
+  - request:
+      body: null
+      headers:
+        Accept:
+          - "*/*"
+        Accept-Encoding:
+          - gzip, deflate
+        Authorization:
+          - XXX
+        Connection:
+          - keep-alive
+        User-Agent:
+          - python-requests/2.22.0
+      method: GET
+      uri: https://api.meetup.com/pro/pydata/groups?only=0
+    response:
+      body:
+        string: !!binary |
+          H4sIAAAAAAAAAIuurtUZRcMLxQIAjGu9v9UBAAA=
+      headers:
+        Accept-Ranges:
+          - bytes
+        Access-Control-Allow-Credentials:
+          - "true"
+        Access-Control-Allow-Origin:
+          - "*"
+        Connection:
+          - keep-alive
+        Content-Encoding:
+          - gzip
+        Content-Length:
+          - "29"
+        Content-Type:
+          - application/json
+        Date:
+          - Sun, 01 Dec 2019 13:29:55 GMT
+        Via:
+          - 1.1 0f538ee832e1105649039b38ce89e883.cloudfront.net (CloudFront)
+          - 1.1 varnish
+        X-Amz-Cf-Id:
+          - xTp6izLBJGLcCR56z75KiDSlH0JiYpYETHvkbSDYd4kFpOrv9cS-bQ==
+        X-Amz-Cf-Pop:
+          - FRA2-C1
+        X-Amzn-Trace-Id:
+          - Root=1-5de3c052-294470d3fb24a20bcde69411
+        X-Cache:
+          - Miss from cloudfront, MISS
+        X-Cache-Hits:
+          - "0"
+        X-Served-By:
+          - cache-fra19176-FRA
+        X-Timer:
+          - S1575206995.739109,VS0,VE517
+        x-amz-apigw-id:
+          - EBr8-EeQIAMFV1w=
+        x-amzn-Remapped-connection:
+          - Close
+        x-amzn-Remapped-content-length:
+          - "554"
+        x-amzn-RequestId:
+          - ddda1c06-3489-452a-8112-27594a1c6960
+        x-total-count:
+          - "156"
+      status:
+        code: 200
+        message: OK
+version: 1

@@ -1,0 +1,9 @@
+#!/bin/bash
+#
+# This script installs the virtual environment as a kernel into Jupyter.
+
+poetry run python \
+	-m ipykernel install \
+	--user \
+	--name meetup_client \
+	--display-name "Python (meetup-client)"

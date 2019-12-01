@@ -1,0 +1,53 @@
+language: python
+python: "3.7"
+dist: xenial
+
+stages:
+  - lint
+  - test
+  - name: deploy
+    if: tag IS present
+
+cache:
+  paths:
+    - .venv
+
+before_install:
+  - bin/check_version
+  - curl -sSL https://raw.githubusercontent.com/sdispater/poetry/master/get-poetry.py | python
+  - source $HOME/.poetry/env
+
+install:
+  - poetry config settings.virtualenvs.in-project true
+  - poetry install -v
+
+jobs:
+  include:
+    - stage: lint
+      script:
+        - make lint
+    - stage: test
+      python:
+        - "3.6"
+        - "3.7"
+        - "3.8"
+      script:
+        - poetry run pytest --cov=meetup_client --cov-report term-missing tests/
+        - poetry run codecov
+    - stage: deploy
+      script:
+        - echo Deploying to PyPI...
+
+before_deploy:
+  - bin/check_release
+  - poetry config http-basic.pypi $PYPI_USERNAME $PYPI_PASSWORD
+  - poetry build -f sdist
+
+deploy:
+  provider: script
+  script: poetry publish
+  skip_cleanup: true
+  on:
+    all_branches: true
+    condition: $TRAVIS_BUILD_STAGE_NAME = Deploy
+    tags: true
