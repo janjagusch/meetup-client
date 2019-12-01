@@ -1,0 +1,105 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Authorization:
+      - XXX
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.22.0
+    method: GET
+    uri: https://api.meetup.com/pro/pydata/groups?only=city%2Ccountry%2Cmember_count
+  response:
+    body:
+      string: !!binary |
+        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
+        1lLu0ZsjAAA=
+    headers:
+      Accept-Ranges:
+      - bytes
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Origin:
+      - '*'
+      Connection:
+      - keep-alive
+      Content-Encoding:
+      - gzip
+      Content-Length:
+      - '2117'
+      Content-Type:
+      - application/json
+      Date:
+      - Sun, 01 Dec 2019 13:29:53 GMT
+      Via:
+      - 1.1 c2a926ef1bafe1ab239d4761594a8099.cloudfront.net (CloudFront)
+      - 1.1 varnish
+      X-Amz-Cf-Id:
+      - nl6jSnEpMXLhJCb7mY7qMh58TlP-xSfmRQ0Ks6dBz6ViswakCpmtDw==
+      X-Amz-Cf-Pop:
+      - FRA2-C1
+      X-Amzn-Trace-Id:
+      - Root=1-5de3c051-d8e65b4615e2131283292d32
+      X-Cache:
+      - Miss from cloudfront, MISS
+      X-Cache-Hits:
+      - '0'
+      X-Served-By:
+      - cache-fra19122-FRA
+      X-Timer:
+      - S1575206993.125255,VS0,VE542
+      x-amz-apigw-id:
+      - EBr8uH-IoAMFaxA=
+      x-amzn-Remapped-connection:
+      - Close
+      x-amzn-Remapped-content-length:
+      - '8521'
+      x-amzn-RequestId:
+      - 05e9dd38-8252-403f-abca-92cf6f2d5d59
+      x-total-count:
+      - '156'
+    status:
+      code: 200
+      message: OK
+version: 1

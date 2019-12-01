@@ -9,124 +9,24 @@ import pandas as pd
 import requests
 from tqdm import tqdm
 
-from .errors import (
-    AccessTokenError,
-    RequestError,
-    BadRequestError,
-    UnauthorizedError,
-    TooManyRequestsError,
-    InternalServerError,
-)
+from .errors import RequestError
 
 
 class MeetupClient:
     """
-    The MeetupClient makes using the Meetup API much easier.
-    It first runs user authorization, using OAuth2 server flow. If no temporary
-    authorization code is provided, instructions will be prompted. Next, it generates
-    an access token that should be valid for one hour. Afterwards, you can query the
-    Meetup API, using the .get and .scroll methods.
+    Client for using the Meetup API.
 
     Args:
-        consumer_key (str): The consumer key.
-        consumer_secret (str): The consumer secret.
-        redirect_uri (str): The redirect uri.
-        code (str, optional): The string that can only be used once to request an
-            access token.
-        scopes (list, optional): Scopes that your client should have.
-        access_token (str, optional): The access token for the API.
+        access_token (str): The access token for the API.
 
     Attributes:
-        consumer_key (str): The consumer key.
-        consumer_secret (str): The consumer secret.
-        redirect_uri (str) The redirect uri.
         access_token (str): The access token for the API.
     """
 
     def __init__(
-        self,
-        *,
-        consumer_key,
-        consumer_secret,
-        redirect_uri,
-        code=None,
-        scopes=None,
-        access_token=None,
+        self, *, access_token,
     ):
-        self.consumer_key = consumer_key
-        self.consumer_secret = consumer_secret
-        self.redirect_uri = redirect_uri
-        if not code and not access_token:
-            scopes = scopes or []
-            code = self._request_authorization(scopes)
-        self.access_token = access_token or self._request_access_token(code)
-
-    def _request_authorization_url(self, scopes):
-        """
-        The url for requesting authorization.
-
-        Returns:
-            str: The url.
-        """
-        return (
-            "https://secure.meetup.com/oauth2/authorize"
-            f"?client_id={self.consumer_key}"
-            f"&redirect_uri={self.redirect_uri}"
-            "&response_type=code"
-            f"&scope={'+'.join(scopes)}"
-        )
-
-    def _request_authorization(self, scopes):
-        """
-        Generates url that the user should navigate to in the browser and returns
-        temporary access code that user inserts into prompt.
-
-        Returns:
-            str: The temporary authorization code.
-        """
-        return input(
-            "First, navigate to the following URL in a browser:\n"
-            "---\n"
-            f"{self._request_authorization_url(scopes)}\n"
-            "---\n"
-            "Next, paste the code from the redirected URL here:"
-        )
-
-    def _request_access_token(self, code):
-        """
-        Requests access token that is used to query from the API.
-
-        Args:
-            code (str): The string that can only be used once to request an
-                access token.
-
-        Returns:
-            str: The access token.
-
-        Raises:
-            AccessTokenError: If access token creation goes wrong.
-        """
-        response = requests.post(
-            url="https://secure.meetup.com/oauth2/access",
-            data={
-                "client_id": self.consumer_key,
-                "client_secret": self.consumer_secret,
-                "grant_type": "authorization_code",
-                "redirect_uri": self.redirect_uri,
-                "code": code,
-            },
-        )
-
-        element = response.json()
-        status_code = response.status_code
-
-        if status_code != 200:
-            if "error_description" in element.keys():
-                raise AccessTokenError(
-                    f"{element['error']}, {element['error_description'].lower()}."
-                )
-            raise AccessTokenError(f"{element['error']}.")
-        return element["access_token"]
+        self.access_token = access_token
 
     def _get(self, *, url, params, headers=None):
         """
@@ -158,15 +58,7 @@ class MeetupClient:
         res = requests.get(url=url, headers=headers, params=params)
 
         status_code = res.status_code
-        if status_code != 200:
-            if status_code == 400:
-                raise BadRequestError(res)
-            if status_code == 401:
-                raise UnauthorizedError(res)
-            if status_code == 429:
-                raise TooManyRequestsError(res)
-            if status_code == 500:
-                raise InternalServerError(res)
+        if not str(status_code).startswith("2"):
             raise RequestError(status_code, res)
         return res
 
@@ -183,7 +75,7 @@ class MeetupClient:
         """
         return int(response.headers["X-Total-Count"])
 
-    def _scroll(self, *, url, params=None, sleep_time=0.1):
+    def _scan(self, *, url, params=None, sleep_time=0.1):
         """
         Iterator for pagination in API request.
 
@@ -229,7 +121,7 @@ class MeetupClient:
             return pd.DataFrame(element)
         return element
 
-    def scroll(self, *, url, to_df=True, sleep_time=0.1, **params):
+    def scan(self, *, url, to_df=True, sleep_time=0.1, **params):
         """
         Runs GET requests against Meetup API with pagination and returns all pages.
 
@@ -243,7 +135,7 @@ class MeetupClient:
         Returns:
             pandas.DataFrame or list: The response.
         """
-        responses = self._scroll(url=url, sleep_time=sleep_time, params=params)
+        responses = self._scan(url=url, sleep_time=sleep_time, params=params)
         elements = [element for response in responses for element in response.json()]
         if to_df:
             return pd.DataFrame(elements)
