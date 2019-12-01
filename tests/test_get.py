@@ -1,3 +1,8 @@
+"""
+Tests for the .get method in meetup_client.client.MeetupClient.
+"""
+
+
 import pandas as pd
 import pytest
 
@@ -26,4 +31,4 @@ def test_get_2(meetup_client, url, kwargs):
 @pytest.mark.parametrize("url,kwargs", [("pro/pydata/groups", {})])
 def test_get_unauthorized(meetup_client_invalid, url, kwargs):
     with pytest.raises(RequestError):
-        res = meetup_client_invalid.get(url=url, **kwargs)
+        meetup_client_invalid.get(url=url, **kwargs)

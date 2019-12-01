@@ -1,5 +1,7 @@
-from copy import deepcopy
-import re
+"""
+Helper methods for the tests.
+"""
+
 import os
 
 from dotenv import load_dotenv
@@ -10,13 +12,19 @@ from meetup_client import MeetupClient
 
 @pytest.fixture(scope="module")
 def vcr_config():
+    """
+    vcr_config.
+    """
     return {
         "filter_headers": [("Authorization", "XXX")],
     }
 
 
-@pytest.fixture(scope="module")
-def vcr(vcr):
+@pytest.fixture(name="vcr", scope="module")
+def vcr_(vcr):
+    """
+    vcr.
+    """
     vcr.match_on = ["method", "scheme", "port", "path", "body", "query"]
     return vcr
 
@@ -48,4 +56,7 @@ def meetup_client_(access_token):
 
 @pytest.fixture(name="meetup_client_invalid")
 def meetup_client_invalid_(access_token_invalid):
+    """
+    MeetupClient object with invlaid access token.
+    """
     return MeetupClient(access_token=access_token_invalid)
