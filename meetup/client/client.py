@@ -12,7 +12,7 @@ from tqdm import tqdm
 from .errors import RequestError
 
 
-class MeetupClient:
+class Client:
     """
     Client for using the Meetup API.
 
@@ -137,11 +137,11 @@ class MeetupClient:
             sleep_time (float, optional): Time to pause between requests.
             **params: Additional arguments for request.
 
-        Returns:
-            pandas.DataFrame or list: The response.
+        Yields:
+            Any[dict, pandas.DataFrame]: The response.
         """
-        responses = self._scan(url=url, sleep_time=sleep_time, params=params)
-        elements = [element for response in responses for element in response.json()]
-        if to_df:
-            return pd.DataFrame(elements)
-        return elements
+        for response in self._scan(url=url, sleep_time=sleep_time, params=params):
+            response = response.json()
+            if to_df:
+                response = pd.DataFrame(response)
+            yield response
