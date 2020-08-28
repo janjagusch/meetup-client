@@ -23,8 +23,20 @@ install:
 jobs:
   include:
     - stage: lint
+      name: lint_black
       script:
-        - make lint
+        - make lint_black
+    - stage: lint
+      name: lint_pylint
+      script:
+        - make lint_pylint
+    - stage: lint
+      name: lint_prettier
+      language: node_js
+      node_js:
+        - "8"
+      script:
+        - make lint_prettier
     - stage: test
       python:
         - "3.6"
