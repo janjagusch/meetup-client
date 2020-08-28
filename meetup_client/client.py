@@ -51,8 +51,11 @@ class MeetupClient:
         url = f"https://api.meetup.com/{url}"
 
         headers = headers or {}
+        access_token = (
+            self.access_token() if callable(self.access_token) else self.access_token
+        )
         headers["Authorization"] = (
-            headers.get("Authorization") or f"Bearer {self.access_token}"
+            headers.get("Authorization") or f"Bearer {access_token}"
         )
 
         res = requests.get(url=url, headers=headers, params=params)
