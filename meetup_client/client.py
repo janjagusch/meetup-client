@@ -17,10 +17,12 @@ class MeetupClient:
     Client for using the Meetup API.
 
     Args:
-        access_token (Any[str, callable]): The access token for the API (or a callable that returns an access token).
+        access_token (Any[str, callable]): The access token for the API
+            (or a callable that returns an access token).
 
     Attributes:
-        access_token (Any[str, callable]): The access token for the API (or a callable that returns an access token).
+        access_token (Any[str, callable]): The access token for the API
+            (or a callable that returns an access token).
     """
 
     def __init__(
