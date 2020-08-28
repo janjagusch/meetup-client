@@ -33,7 +33,7 @@ format_black: test_missing_init
 format_prettier:
 	@echo "Prettier formatting ..."
 	@npx prettier --write $$(find \( -name "*.yml" -o -name "*.yaml" -o -name "*.json" \) -not \( -path "./.venv/*" -o -path "./.tox/*" \))
-	
+
 ## formatting
 format: format_black format_prettier
 
@@ -45,7 +45,7 @@ lint_black: test_missing_init
 ## prettier formatting
 lint_prettier:
 	@echo "Prettier linting ..."
-	@npx prettier --check $$(find \( -name "*.yml" -o -name "*.yaml" -o -name "*.json" \) -not \( -path "./.venv/*" -o -path "./.tox/*" \))
+	@npx prettier@2.1.1 --check $$(find \( -name "*.yml" -o -name "*.yaml" -o -name "*.json" \) -not \( -path "./.venv/*" -o -path "./.tox/*" \))
 
 ## pylint linting
 lint_pylint: test_missing_init
