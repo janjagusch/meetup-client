@@ -4,10 +4,10 @@ Helper methods for the tests.
 
 import os
 
-from dotenv import load_dotenv
 import pytest
+from dotenv import load_dotenv
 
-from meetup_client import MeetupClient
+from meetup.client import Client
 
 
 @pytest.fixture(scope="module")
@@ -32,7 +32,7 @@ def vcr_(vcr):
 @pytest.fixture(name="access_token")
 def access_token_():
     """
-    The access token for the MeetupClient object.
+    The access token for the Client object.
     """
     load_dotenv()
     return os.environ.get("MEETUP_CLIENT_ACCESS_TOKEN") or "XXX"
@@ -49,14 +49,14 @@ def access_token_invalid_():
 @pytest.fixture(name="meetup_client")
 def meetup_client_(access_token):
     """
-    The MeetupClient object.
+    The Client object.
     """
-    return MeetupClient(access_token=access_token)
+    return Client(access_token=access_token)
 
 
 @pytest.fixture(name="meetup_client_invalid")
 def meetup_client_invalid_(access_token_invalid):
     """
-    MeetupClient object with invlaid access token.
+    Client object with invlaid access token.
     """
-    return MeetupClient(access_token=access_token_invalid)
+    return Client(access_token=access_token_invalid)
