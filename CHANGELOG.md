@@ -1,8 +1,11 @@
 # Changelog
 
-## 0.2.1
+## 0.3.0
 
-- The client now correctly uses the 'access_token' attribute in the access token object for authorization.
+- The client now uses the 'meetup' namespace.
+- Renamed 'MeetupClient'  to 'Client'.
+- Bumped minimum required Python version to 3.7.
+- The `scan` function now returns a generator object.
 
 ## 0.2.0
 
