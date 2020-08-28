@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "meetup-client"
-version = "0.1.0"
+version = "0.2.0"
 description = "A Python client for the Meetup API."
 authors = ["Jan-Benedikt Jagusch <jan.jagusch@gmail.com>"]
 readme = "README.md"
@@ -14,7 +14,7 @@ pandas = "^0.25.3"
 tqdm = "^4.38"
 
 [tool.poetry.dev-dependencies]
-black = {version="19.10b0", allows-prereleases=true}
+black = {version="19.10b0", allow-prereleases=true}
 codecov = "^2.0"
 ipykernel = "^5"
 pylint = "^2"

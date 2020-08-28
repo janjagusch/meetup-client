@@ -18,14 +18,27 @@ before_install:
   - source $HOME/.poetry/env
 
 install:
-  - poetry config settings.virtualenvs.in-project true
   - poetry install -v
 
 jobs:
   include:
     - stage: lint
+      name: lint_black
       script:
-        - make lint
+        - make lint_black
+    - stage: lint
+      name: lint_pylint
+      script:
+        - make lint_pylint
+    - stage: lint
+      name: lint_prettier
+      language: node_js
+      node_js:
+        - "12"
+      before_install: skip
+      install: skip
+      script:
+        - make lint_prettier
     - stage: test
       python:
         - "3.6"
@@ -40,7 +53,6 @@ jobs:
 
 before_deploy:
   - bin/check_release
-  - poetry config http-basic.pypi $PYPI_USERNAME $PYPI_PASSWORD
   - poetry build -f sdist
 
 deploy:
