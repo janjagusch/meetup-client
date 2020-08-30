@@ -5,7 +5,7 @@ dist: xenial
 stages:
   - lint
   - test
-  - name: deploy
+  - name: release
     if: tag IS present
 
 cache:
@@ -41,25 +41,12 @@ jobs:
         - make lint_prettier
     - stage: test
       python:
-        - "3.6"
         - "3.7"
         - "3.8"
       script:
-        - poetry run pytest --cov=meetup_client --cov-report term-missing tests/
+        - poetry run pytest --cov=meetup --cov-report term-missing tests/
         - poetry run codecov
-    - stage: deploy
+    - stage: release
       script:
-        - echo Deploying to PyPI...
-
-before_deploy:
-  - bin/check_release
-  - poetry build -f sdist
-
-deploy:
-  provider: script
-  script: poetry publish
-  skip_cleanup: true
-  on:
-    all_branches: true
-    condition: $TRAVIS_BUILD_STAGE_NAME = Deploy
-    tags: true
+        - bin/check_release
+        - poetry publish --build

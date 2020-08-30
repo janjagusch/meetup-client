@@ -6,7 +6,7 @@ Tests for the .get method in meetup_client.client.MeetupClient.
 import pandas as pd
 import pytest
 
-from meetup_client.errors import RequestError
+from meetup.client.errors import RequestError
 
 
 @pytest.mark.vcr()

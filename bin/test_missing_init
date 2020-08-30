@@ -39,6 +39,6 @@ def find_missing_init(file_path):
 
 
 if __name__ == "__main__":
-    missing_init = find_missing_init("meetup_client")
+    missing_init = find_missing_init("meetup")
     if len(missing_init) > 0:
         raise MissingInitError("__init__.py is missing in: {}".format(missing_init))

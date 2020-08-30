@@ -1,29 +1,31 @@
 [tool.poetry]
 name = "meetup-client"
-version = "0.2.0"
+version = "0.3.0"
 description = "A Python client for the Meetup API."
 authors = ["Jan-Benedikt Jagusch <jan.jagusch@gmail.com>"]
 readme = "README.md"
 repository = "https://github.com/janjagusch/meetup-client"
 license = "MIT"
+packages = [
+	{include = "meetup"}
+]
 
 [tool.poetry.dependencies]
-python = "^3.6"
-requests = "^2.22"
-pandas = "^0.25.3"
-tqdm = "^4.38"
+python = "^3.7"
+requests = "^2.24.0"
+pandas = "^1.1.1"
+tqdm = "^4.48.2"
 
 [tool.poetry.dev-dependencies]
-black = {version="19.10b0", allow-prereleases=true}
-codecov = "^2.0"
-ipykernel = "^5"
-pylint = "^2"
-pytest = "^5"
-pytest-cov = "^2.8"
-pytest-vcr = "^1.0"
+black = {version="20.8b1", allow-prereleases=true}
+codecov = "^2.1.9"
+ipykernel = "^5.3.4"
+pylint = "^2.6.0"
+pytest = "^5.4.3"
+pytest-cov = "^2.10.1"
+pytest-vcr = "^1.0.2"
 python-dotenv = "^0.10.3"
-tox = "^3"
-PyYAML = "^5.1"
+tox = "^3.19.0"
 
 [build-system]
 requires = ["poetry>=0.12"]
