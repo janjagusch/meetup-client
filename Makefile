@@ -50,7 +50,7 @@ lint_prettier:
 ## pylint linting
 lint_pylint: test_missing_init
 	@echo "Pylint linting ..."
-	@poetry run pylint meetup_client
+	@poetry run pylint meetup
 	@poetry run pylint $$(find tests/ -iname "*.py")
 
 ## linting
