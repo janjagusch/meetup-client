@@ -13,11 +13,11 @@ packages = [
 [tool.poetry.dependencies]
 python = "^3.7"
 requests = "^2.24.0"
-pandas = "^0.25.3"
-tqdm = "^4.38"
+pandas = "^1.1.1"
+tqdm = "^4.48.2"
 
 [tool.poetry.dev-dependencies]
-black = {version="19.10b0", allow-prereleases=true}
+black = {version="20.8b1", allow-prereleases=true}
 codecov = "^2.1.9"
 ipykernel = "^5.3.4"
 pylint = "^2.6.0"
