@@ -35,4 +35,4 @@ def test_scan_2(meetup_client, url, kwargs):
 @pytest.mark.parametrize("url,kwargs", [("PyData-Suedwest/members", {})])
 def test_scan_unauthorized(meetup_client_invalid, url, kwargs):
     with pytest.raises(RequestError):
-        meetup_client_invalid.scan(url=url, **kwargs)
+        list(meetup_client_invalid.scan(url=url, **kwargs))
