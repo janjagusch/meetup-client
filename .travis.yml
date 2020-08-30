@@ -44,7 +44,7 @@ jobs:
         - "3.7"
         - "3.8"
       script:
-        - poetry run pytest --cov=meetup_client --cov-report term-missing tests/
+        - poetry run pytest --cov=meetup --cov-report term-missing tests/
         - poetry run codecov
     - stage: release
       script:
