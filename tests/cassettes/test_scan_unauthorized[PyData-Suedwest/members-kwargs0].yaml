@@ -31,7 +31,7 @@ interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Mon, 31 Aug 2020 13:58:58 GMT
+      - Mon, 31 Aug 2020 14:32:02 GMT
       Server:
       - Apache/2.4.39 (Unix) OpenSSL/1.1.1c
       Vary:
@@ -45,11 +45,11 @@ interactions:
       X-Cache-Hits:
       - '0'
       X-Meetup-Request-ID:
-      - 565beeb4-2fd9-48ef-b8a6-2426de4fb082
+      - 64e66dee-3ec4-4e96-bf78-a7c9946e58bc
       X-Served-By:
-      - cache-dub4348-DUB
+      - cache-dub4320-DUB
       X-Timer:
-      - S1598882338.277992,VS0,VE359
+      - S1598884322.948214,VS0,VE353
     status:
       code: 401
       message: Unauthorized
