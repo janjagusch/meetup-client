@@ -12,7 +12,11 @@ from meetup.client.errors import RequestError
 
 @pytest.mark.vcr()
 @pytest.mark.parametrize(
-    "url,kwargs", [("PyData-Suedwest/members", {"only": "id,group_profile.created"})]
+    "url,kwargs",
+    [
+        ("PyData-Suedwest/members", {"only": "id,group_profile.created"}),
+        ("PyData-Suedwest/events", {}),
+    ],
 )
 def test_scan_1(meetup_client, url, kwargs):
     assert inspect.isgeneratorfunction(meetup_client.scan)
