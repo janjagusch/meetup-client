@@ -103,7 +103,9 @@ class Client:
             yield res
             total_count = self._get_total_count(res)
             total_requests = math.ceil(total_count / params["page"])
-        for offset in tqdm(range(params["offset"] + 1, total_requests), initial=1, total=total_requests):
+        for offset in tqdm(
+            range(params["offset"] + 1, total_requests), initial=1, total=total_requests
+        ):
             params["offset"] = offset
             sleep(sleep_time)
             res = self._get(url=url, params=params)

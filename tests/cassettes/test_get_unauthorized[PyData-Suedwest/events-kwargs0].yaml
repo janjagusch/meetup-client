@@ -1,56 +1,56 @@
 interactions:
-- request:
-    body: null
-    headers:
-      Accept:
-      - '*/*'
-      Accept-Encoding:
-      - gzip, deflate
-      Authorization:
-      - XXX
-      Connection:
-      - keep-alive
-      User-Agent:
-      - python-requests/2.24.0
-    method: GET
-    uri: https://api.meetup.com/PyData-Suedwest/events
-  response:
-    body:
-      string: !!binary |
-        H4sIAAAAAAAAA6tWSi0qyi8qVrKKrlZKzk9JVbJSSiwtyYhPS8zMUdJRyk0tLk5MB4l65pUl5mSm
-        KOSDpBWSi1JTUvNKMhNzipVqY2sBwX8Nn0cAAAA=
-    headers:
-      Accept-Ranges:
-      - bytes
-      Connection:
-      - keep-alive
-      Content-Encoding:
-      - gzip
-      Content-Length:
-      - '86'
-      Content-Type:
-      - application/json; charset=utf-8
-      Date:
-      - Mon, 31 Aug 2020 14:31:46 GMT
-      Server:
-      - Apache/2.4.39 (Unix) OpenSSL/1.1.1c
-      Vary:
-      - Accept-Encoding,User-Agent,Accept-Language
-      Via:
-      - 1.1 varnish
-      WWW-Authenticate:
-      - OAuth realm="https://api.meetup.com/"
-      X-Cache:
-      - MISS
-      X-Cache-Hits:
-      - '0'
-      X-Meetup-Request-ID:
-      - b4d3faff-8b73-4337-8f19-89d4e29fb013
-      X-Served-By:
-      - cache-dub4330-DUB
-      X-Timer:
-      - S1598884306.957961,VS0,VE351
-    status:
-      code: 401
-      message: Unauthorized
+  - request:
+      body: null
+      headers:
+        Accept:
+          - "*/*"
+        Accept-Encoding:
+          - gzip, deflate
+        Authorization:
+          - XXX
+        Connection:
+          - keep-alive
+        User-Agent:
+          - python-requests/2.24.0
+      method: GET
+      uri: https://api.meetup.com/PyData-Suedwest/events
+    response:
+      body:
+        string: !!binary |
+          H4sIAAAAAAAAA6tWSi0qyi8qVrKKrlZKzk9JVbJSSiwtyYhPS8zMUdJRyk0tLk5MB4l65pUl5mSm
+          KOSDpBWSi1JTUvNKMhNzipVqY2sBwX8Nn0cAAAA=
+      headers:
+        Accept-Ranges:
+          - bytes
+        Connection:
+          - keep-alive
+        Content-Encoding:
+          - gzip
+        Content-Length:
+          - "86"
+        Content-Type:
+          - application/json; charset=utf-8
+        Date:
+          - Mon, 31 Aug 2020 14:31:46 GMT
+        Server:
+          - Apache/2.4.39 (Unix) OpenSSL/1.1.1c
+        Vary:
+          - Accept-Encoding,User-Agent,Accept-Language
+        Via:
+          - 1.1 varnish
+        WWW-Authenticate:
+          - OAuth realm="https://api.meetup.com/"
+        X-Cache:
+          - MISS
+        X-Cache-Hits:
+          - "0"
+        X-Meetup-Request-ID:
+          - b4d3faff-8b73-4337-8f19-89d4e29fb013
+        X-Served-By:
+          - cache-dub4330-DUB
+        X-Timer:
+          - S1598884306.957961,VS0,VE351
+      status:
+        code: 401
+        message: Unauthorized
 version: 1

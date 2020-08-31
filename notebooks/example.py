@@ -28,12 +28,7 @@ load_dotenv()
 client = Client(access_token=os.environ["MEETUP_CLIENT_ACCESS_TOKEN"])
 
 (
-    pd.concat(
-        client.scan(
-            url="PyData-Suedwest/members",
-            only="id,city"
-        )
-    )
+    pd.concat(client.scan(url="PyData-Suedwest/members", only="id,city"))
     .groupby("city")
     .size()
     .sort_values(ascending=False)
