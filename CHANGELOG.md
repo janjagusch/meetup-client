@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.3.1
+
+- The `scan` function now also works for single page requests.
+- Fixed the progress bar, such that also the first iteration is displayed.
+- Updated README and example.
+
 ## 0.3.0
 
 - The client now uses the 'meetup' namespace.
