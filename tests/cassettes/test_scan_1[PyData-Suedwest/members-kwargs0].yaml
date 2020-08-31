@@ -1,554 +1,656 @@
 interactions:
-  - request:
-      body: null
-      headers:
-        Accept:
-          - "*/*"
-        Accept-Encoding:
-          - gzip, deflate
-        Authorization:
-          - XXX
-        Connection:
-          - keep-alive
-        User-Agent:
-          - python-requests/2.22.0
-      method: GET
-      uri: https://api.meetup.com/PyData-Suedwest/members?only=id%2Cgroup_profile.created&offset=0&page=200
-    response:
-      body:
-        string: !!binary |
-          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
-      headers:
-        Accept-Ranges:
-          - bytes
-        Connection:
-          - keep-alive
-        Content-Encoding:
-          - gzip
-        Content-Length:
-          - "2392"
-        Content-Type:
-          - application/json; charset=utf-8
-        Date:
-          - Sun, 01 Dec 2019 13:55:28 GMT
-        ETag:
-          - '"defc3821305cade7d2af5088768e6d35-gzip"'
-        Link:
-          - <https://api.meetup.com/PyData-Suedwest/members?offset=1&only=id%2Cgroup_profile.created&page=200>;
-            rel="next"
-        Server:
-          - Apache/2.4.25 (Unix) OpenSSL/1.0.2k
-        Vary:
-          - Accept-Encoding,User-Agent,Accept-Language
-        Via:
-          - 1.1 varnish
-        X-Accepted-OAuth-Scopes:
-          - ageless, basic
-        X-Cache:
-          - MISS
-        X-Cache-Hits:
-          - "0"
-        X-Meetup-Request-ID:
-          - a860dde9-e516-4500-bc37-17513396f6bb
-        X-Meetup-server:
-          - ip-10-192-2-182
-        X-OAuth-Scopes:
-          - basic
-        X-RateLimit-Limit:
-          - "30"
-        X-RateLimit-Remaining:
-          - "29"
-        X-RateLimit-Reset:
-          - "10"
-        X-Served-By:
-          - cache-fra19133-FRA
-        X-Timer:
-          - S1575208527.348586,VS0,VE695
-        X-Total-Count:
-          - "961"
-      status:
-        code: 200
-        message: OK
-  - request:
-      body: null
-      headers:
-        Accept:
-          - "*/*"
-        Accept-Encoding:
-          - gzip, deflate
-        Authorization:
-          - XXX
-        Connection:
-          - keep-alive
-        User-Agent:
-          - python-requests/2.22.0
-      method: GET
-      uri: https://api.meetup.com/PyData-Suedwest/members?only=id%2Cgroup_profile.created&offset=1&page=200
-    response:
-      body:
-        string: !!binary |
-          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
-          n0Ll4WOFHDtOar1UOiSh4t//+gfJtgv+Cy4AAA==
-      headers:
-        Accept-Ranges:
-          - bytes
-        Connection:
-          - keep-alive
-        Content-Encoding:
-          - gzip
-        Content-Length:
-          - "2365"
-        Content-Type:
-          - application/json; charset=utf-8
-        Date:
-          - Sun, 01 Dec 2019 13:55:28 GMT
-        ETag:
-          - '"bcb80f953a2361832539bed91d5516cc-gzip"'
-        Link:
-          - <https://api.meetup.com/PyData-Suedwest/members?offset=2&only=id%2Cgroup_profile.created&page=200>;
-            rel="next"
-          - <https://api.meetup.com/PyData-Suedwest/members?offset=0&only=id%2Cgroup_profile.created&page=200>;
-            rel="prev"
-        Server:
-          - Apache/2.4.25 (Unix) OpenSSL/1.0.2k
-        Vary:
-          - Accept-Encoding,User-Agent,Accept-Language
-        Via:
-          - 1.1 varnish
-        X-Accepted-OAuth-Scopes:
-          - ageless, basic
-        X-Cache:
-          - MISS
-        X-Cache-Hits:
-          - "0"
-        X-Meetup-Request-ID:
-          - fe3ccfd1-79e5-4a96-b2e1-4764f4d19650
-        X-Meetup-server:
-          - ip-10-192-23-244
-        X-OAuth-Scopes:
-          - basic
-        X-RateLimit-Limit:
-          - "30"
-        X-RateLimit-Remaining:
-          - "28"
-        X-RateLimit-Reset:
-          - "9"
-        X-Served-By:
-          - cache-fra19120-FRA
-        X-Timer:
-          - S1575208528.314255,VS0,VE583
-        X-Total-Count:
-          - "961"
-      status:
-        code: 200
-        message: OK
-  - request:
-      body: null
-      headers:
-        Accept:
-          - "*/*"
-        Accept-Encoding:
-          - gzip, deflate
-        Authorization:
-          - XXX
-        Connection:
-          - keep-alive
-        User-Agent:
-          - python-requests/2.22.0
-      method: GET
-      uri: https://api.meetup.com/PyData-Suedwest/members?only=id%2Cgroup_profile.created&offset=2&page=200
-    response:
-      body:
-        string: !!binary |
-          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
-          o/VDn3zY1FGnPwA8e1fTzfj1fxp5J1kLLgAA
-      headers:
-        Accept-Ranges:
-          - bytes
-        Connection:
-          - keep-alive
-        Content-Encoding:
-          - gzip
-        Content-Length:
-          - "2307"
-        Content-Type:
-          - application/json; charset=utf-8
-        Date:
-          - Sun, 01 Dec 2019 13:55:29 GMT
-        ETag:
-          - '"5484f27aa0ec7109161c98e9fe3f7f9f-gzip"'
-        Link:
-          - <https://api.meetup.com/PyData-Suedwest/members?offset=3&only=id%2Cgroup_profile.created&page=200>;
-            rel="next"
-          - <https://api.meetup.com/PyData-Suedwest/members?offset=1&only=id%2Cgroup_profile.created&page=200>;
-            rel="prev"
-        Server:
-          - Apache/2.4.25 (Unix) OpenSSL/1.0.2k
-        Vary:
-          - Accept-Encoding,User-Agent,Accept-Language
-        Via:
-          - 1.1 varnish
-        X-Accepted-OAuth-Scopes:
-          - ageless, basic
-        X-Cache:
-          - MISS
-        X-Cache-Hits:
-          - "0"
-        X-Meetup-Request-ID:
-          - 74e00a93-0e47-4463-b450-21c1a4d65849
-        X-Meetup-server:
-          - ip-10-192-3-188
-        X-OAuth-Scopes:
-          - basic
-        X-RateLimit-Limit:
-          - "30"
-        X-RateLimit-Remaining:
-          - "27"
-        X-RateLimit-Reset:
-          - "8"
-        X-Served-By:
-          - cache-fra19123-FRA
-        X-Timer:
-          - S1575208529.139302,VS0,VE707
-        X-Total-Count:
-          - "961"
-      status:
-        code: 200
-        message: OK
-  - request:
-      body: null
-      headers:
-        Accept:
-          - "*/*"
-        Accept-Encoding:
-          - gzip, deflate
-        Authorization:
-          - XXX
-        Connection:
-          - keep-alive
-        User-Agent:
-          - python-requests/2.22.0
-      method: GET
-      uri: https://api.meetup.com/PyData-Suedwest/members?only=id%2Cgroup_profile.created&offset=3&page=200
-    response:
-      body:
-        string: !!binary |
-          H4sIAAAAAAAAA42awaputw2F3+WOM7At2bLyKqWU0qYlUEgI7Sjk3fvpv7SxbqHS9OfoeG9paa0l
-          ef/h1y9//+Wnf/38p59/+elvP/7jhy/f//rlL7/88Od//vDXL9/Pve7Z6+w5xvjtuy8/xm/Txt4m
-          67fv/n/oGeuqjPN76Jp67NjyRujhlPGEHtG19tZO6BHTJ/Qu17uvdUK3+H3e1ZfetaVz6nZf95tT
-          l7RO3T5tv6G2dc5Ogrfwp8/zXoq1SHkndB3f76v62H59V6FU4o5pLyKu8OMep3Pq2PN5YJc1zXfn
-          VdVtrZxfEZfOoVTf/icUMFahEri3BMPp5rpPGUoq9920ynvqkXFXAxBzxKul0LuW7rKsMsacLi8M
-          NwBZrdoMm8fed7V5T/xSImLNq/TOeyrwveSpfmAKc1Lf7Dtlu5Rp2nqvz7ETDidp9/pUPZ8/fU5V
-          6MVHDYntGzKZmV500kklqUFKRlI0kZotHacM5V1F4JK3OPfwIN4Boo/ATgLiljPLNBEKDekLiXEV
-          eDWK43fNE3j8/VTQ1cHwpsHGlSdNUZtD55SRK1pOXhza2XdI3XPww5m20vOCy62nPtW3XbouI2II
-          71Ei4uyBSsw3wYAzIFKFEnSnn5eF16LS3uhWulMTM9GtRmHrV6X0FOelUmJJe60aQdUyNYWS3yF2
-          yweG9++HhP/7qmTpXupVZskE1fC3rKoQP1RXl1VgpvP2jbnZaCgOcg5c70yIGPTrrk8FwPP4W5yx
-          zMh7I1TQYPcM4TkaTm2jL+QqETgYhGA7oWa6nweegnwNrTU9PA4UnjwI/HDuqEPN15SbWBjF2ZiY
-          BgvrtdSusDDi51Kfeq7pSXUdrvzSoCb1qZII/KhvaSjOoagmSZhdD9xfA/Hc8NEnPfCyoQ3ZIJTa
-          JmqC0wZ2og6Np93JcA2c9KpZjVAY8C0OPLWcnqszzIuSmMzg0Uqr7pxzNNgoh8bzlmhSSkOqZiJT
-          tORooziL+qemg2Ccfi0ZcYNB9zlz6BT+W910ck+Q+AN/40nmaaQJ2chqxTDHTx0gTuq6U5oGj9th
-          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
-          NtadIel//DfWiW8GCi4AAA==
-      headers:
-        Accept-Ranges:
-          - bytes
-        Connection:
-          - keep-alive
-        Content-Encoding:
-          - gzip
-        Content-Length:
-          - "2353"
-        Content-Type:
-          - application/json; charset=utf-8
-        Date:
-          - Sun, 01 Dec 2019 13:55:30 GMT
-        ETag:
-          - '"2bdea9d66f9a26f28a5bb0103148a4d7-gzip"'
-        Link:
-          - <https://api.meetup.com/PyData-Suedwest/members?offset=4&only=id%2Cgroup_profile.created&page=200>;
-            rel="next"
-          - <https://api.meetup.com/PyData-Suedwest/members?offset=2&only=id%2Cgroup_profile.created&page=200>;
-            rel="prev"
-        Server:
-          - Apache/2.4.25 (Unix) OpenSSL/1.0.2k
-        Vary:
-          - Accept-Encoding,User-Agent,Accept-Language
-        Via:
-          - 1.1 varnish
-        X-Accepted-OAuth-Scopes:
-          - ageless, basic
-        X-Cache:
-          - MISS
-        X-Cache-Hits:
-          - "0"
-        X-Meetup-Request-ID:
-          - fec9b2f7-b0c6-4468-9b9c-edb3ea5063ef
-        X-Meetup-server:
-          - ip-10-192-13-216
-        X-OAuth-Scopes:
-          - basic
-        X-RateLimit-Limit:
-          - "30"
-        X-RateLimit-Remaining:
-          - "26"
-        X-RateLimit-Reset:
-          - "7"
-        X-Served-By:
-          - cache-fra19130-FRA
-        X-Timer:
-          - S1575208530.043119,VS0,VE656
-        X-Total-Count:
-          - "961"
-      status:
-        code: 200
-        message: OK
-  - request:
-      body: null
-      headers:
-        Accept:
-          - "*/*"
-        Accept-Encoding:
-          - gzip, deflate
-        Authorization:
-          - XXX
-        Connection:
-          - keep-alive
-        User-Agent:
-          - python-requests/2.22.0
-      method: GET
-      uri: https://api.meetup.com/PyData-Suedwest/members?only=id%2Cgroup_profile.created&offset=4&page=200
-    response:
-      body:
-        string: !!binary |
-          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
-          MEKXV9cE/517xB8//wuutOUGESUAAA==
-      headers:
-        Accept-Ranges:
-          - bytes
-        Connection:
-          - keep-alive
-        Content-Encoding:
-          - gzip
-        Content-Length:
-          - "1903"
-        Content-Type:
-          - application/json; charset=utf-8
-        Date:
-          - Sun, 01 Dec 2019 13:55:31 GMT
-        ETag:
-          - '"8ea6953c23d34ece2d26409d5e8f9368-gzip"'
-        Link:
-          - <https://api.meetup.com/PyData-Suedwest/members?offset=3&only=id%2Cgroup_profile.created&page=200>;
-            rel="prev"
-        Server:
-          - Apache/2.4.25 (Unix) OpenSSL/1.0.2k
-        Vary:
-          - Accept-Encoding,User-Agent,Accept-Language
-        Via:
-          - 1.1 varnish
-        X-Accepted-OAuth-Scopes:
-          - ageless, basic
-        X-Cache:
-          - MISS
-        X-Cache-Hits:
-          - "0"
-        X-Meetup-Request-ID:
-          - da34a0bd-d0f9-4954-8396-2d530cab3f89
-        X-Meetup-server:
-          - ip-10-192-2-60
-        X-OAuth-Scopes:
-          - basic
-        X-RateLimit-Limit:
-          - "30"
-        X-RateLimit-Remaining:
-          - "25"
-        X-RateLimit-Reset:
-          - "6"
-        X-Served-By:
-          - cache-fra19131-FRA
-        X-Timer:
-          - S1575208531.157020,VS0,VE783
-        X-Total-Count:
-          - "961"
-      status:
-        code: 200
-        message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Authorization:
+      - XXX
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.24.0
+    method: GET
+    uri: https://api.meetup.com/PyData-Suedwest/members?only=id%2Cgroup_profile.created&offset=0&page=200
+  response:
+    body:
+      string: !!binary |
+        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
+    headers:
+      Accept-Ranges:
+      - bytes
+      Connection:
+      - keep-alive
+      Content-Encoding:
+      - gzip
+      Content-Length:
+      - '2425'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Mon, 31 Aug 2020 13:58:14 GMT
+      ETag:
+      - '"a979c81b5597779fb6305eb5a42a1c5f-gzip"'
+      Link:
+      - <https://api.meetup.com/PyData-Suedwest/members?offset=1&only=id%2Cgroup_profile.created&page=200>;
+        rel="next"
+      Server:
+      - Apache/2.4.39 (Unix) OpenSSL/1.1.1c
+      Vary:
+      - Accept-Encoding,User-Agent,Accept-Language
+      Via:
+      - 1.1 varnish
+      X-Accepted-OAuth-Scopes:
+      - basic
+      X-Cache:
+      - MISS
+      X-Cache-Hits:
+      - '0'
+      X-Meetup-Request-ID:
+      - 5536f128-d545-4ac5-893f-782b28d5bfe0
+      X-Meetup-server:
+      - ip-10-192-22-242
+      X-OAuth-Scopes:
+      - basic
+      X-RateLimit-Limit:
+      - '30'
+      X-RateLimit-Remaining:
+      - '27'
+      X-RateLimit-Reset:
+      - '8'
+      X-Served-By:
+      - cache-dub4344-DUB
+      X-Timer:
+      - S1598882294.815919,VS0,VE593
+      X-Total-Count:
+      - '1103'
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Authorization:
+      - XXX
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.24.0
+    method: GET
+    uri: https://api.meetup.com/PyData-Suedwest/members?only=id%2Cgroup_profile.created&offset=1&page=200
+  response:
+    body:
+      string: !!binary |
+        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
+    headers:
+      Accept-Ranges:
+      - bytes
+      Connection:
+      - keep-alive
+      Content-Encoding:
+      - gzip
+      Content-Length:
+      - '2379'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Mon, 31 Aug 2020 13:58:15 GMT
+      ETag:
+      - '"ebd8a2d3bdbe8ea7c4406076f53ce38d-gzip"'
+      Link:
+      - <https://api.meetup.com/PyData-Suedwest/members?offset=2&only=id%2Cgroup_profile.created&page=200>;
+        rel="next"
+      - <https://api.meetup.com/PyData-Suedwest/members?offset=0&only=id%2Cgroup_profile.created&page=200>;
+        rel="prev"
+      Server:
+      - Apache/2.4.39 (Unix) OpenSSL/1.1.1c
+      Vary:
+      - Accept-Encoding,User-Agent,Accept-Language
+      Via:
+      - 1.1 varnish
+      X-Accepted-OAuth-Scopes:
+      - basic
+      X-Cache:
+      - MISS
+      X-Cache-Hits:
+      - '0'
+      X-Meetup-Request-ID:
+      - dbddee33-e038-473d-adee-0ffc6d5a59ff
+      X-Meetup-server:
+      - ip-10-192-22-218
+      X-OAuth-Scopes:
+      - basic
+      X-RateLimit-Limit:
+      - '30'
+      X-RateLimit-Remaining:
+      - '26'
+      X-RateLimit-Reset:
+      - '7'
+      X-Served-By:
+      - cache-dub4323-DUB
+      X-Timer:
+      - S1598882295.791346,VS0,VE875
+      X-Total-Count:
+      - '1103'
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Authorization:
+      - XXX
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.24.0
+    method: GET
+    uri: https://api.meetup.com/PyData-Suedwest/members?only=id%2Cgroup_profile.created&offset=2&page=200
+  response:
+    body:
+      string: !!binary |
+        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
+        mz28MWcoxVMGNwjVVP6//+UPhAlfyQkuAAA=
+    headers:
+      Accept-Ranges:
+      - bytes
+      Connection:
+      - keep-alive
+      Content-Encoding:
+      - gzip
+      Content-Length:
+      - '2363'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Mon, 31 Aug 2020 13:58:48 GMT
+      ETag:
+      - '"188680857a2082d5d2bee68919efbf48-gzip"'
+      Link:
+      - <https://api.meetup.com/PyData-Suedwest/members?offset=3&only=id%2Cgroup_profile.created&page=200>;
+        rel="next"
+      - <https://api.meetup.com/PyData-Suedwest/members?offset=1&only=id%2Cgroup_profile.created&page=200>;
+        rel="prev"
+      Server:
+      - Apache/2.4.39 (Unix) OpenSSL/1.1.1c
+      Vary:
+      - Accept-Encoding,User-Agent,Accept-Language
+      Via:
+      - 1.1 varnish
+      X-Accepted-OAuth-Scopes:
+      - basic
+      X-Cache:
+      - MISS
+      X-Cache-Hits:
+      - '0'
+      X-Meetup-Request-ID:
+      - 707f5d8b-bf15-4bfc-b026-b93172716891
+      X-Meetup-server:
+      - ip-10-192-2-227
+      X-OAuth-Scopes:
+      - basic
+      X-RateLimit-Limit:
+      - '30'
+      X-RateLimit-Remaining:
+      - '29'
+      X-RateLimit-Reset:
+      - '10'
+      X-Served-By:
+      - cache-dub4335-DUB
+      X-Timer:
+      - S1598882328.626466,VS0,VE546
+      X-Total-Count:
+      - '1103'
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Authorization:
+      - XXX
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.24.0
+    method: GET
+    uri: https://api.meetup.com/PyData-Suedwest/members?only=id%2Cgroup_profile.created&offset=3&page=200
+  response:
+    body:
+      string: !!binary |
+        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
+        VC/9tbpB9ZdvdZaJ5j1///k/ARm38wkuAAA=
+    headers:
+      Accept-Ranges:
+      - bytes
+      Connection:
+      - keep-alive
+      Content-Encoding:
+      - gzip
+      Content-Length:
+      - '2306'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Mon, 31 Aug 2020 13:58:48 GMT
+      ETag:
+      - '"7a4a23ec19542ef0d7f3f4c9311fef9a-gzip"'
+      Link:
+      - <https://api.meetup.com/PyData-Suedwest/members?offset=4&only=id%2Cgroup_profile.created&page=200>;
+        rel="next"
+      - <https://api.meetup.com/PyData-Suedwest/members?offset=2&only=id%2Cgroup_profile.created&page=200>;
+        rel="prev"
+      Server:
+      - Apache/2.4.39 (Unix) OpenSSL/1.1.1c
+      Vary:
+      - Accept-Encoding,User-Agent,Accept-Language
+      Via:
+      - 1.1 varnish
+      X-Accepted-OAuth-Scopes:
+      - basic
+      X-Cache:
+      - MISS
+      X-Cache-Hits:
+      - '0'
+      X-Meetup-Request-ID:
+      - 430e7bd0-9e55-410b-b8ef-4909f4814d06
+      X-Meetup-server:
+      - ip-10-192-22-218
+      X-OAuth-Scopes:
+      - basic
+      X-RateLimit-Limit:
+      - '30'
+      X-RateLimit-Remaining:
+      - '28'
+      X-RateLimit-Reset:
+      - '9'
+      X-Served-By:
+      - cache-dub4346-DUB
+      X-Timer:
+      - S1598882329.626422,VS0,VE361
+      X-Total-Count:
+      - '1103'
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Authorization:
+      - XXX
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.24.0
+    method: GET
+    uri: https://api.meetup.com/PyData-Suedwest/members?only=id%2Cgroup_profile.created&offset=4&page=200
+  response:
+    body:
+      string: !!binary |
+        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
+    headers:
+      Accept-Ranges:
+      - bytes
+      Connection:
+      - keep-alive
+      Content-Encoding:
+      - gzip
+      Content-Length:
+      - '2375'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Mon, 31 Aug 2020 13:58:50 GMT
+      ETag:
+      - '"b22179b012680b46bf6d92d7bb5250da-gzip"'
+      Link:
+      - <https://api.meetup.com/PyData-Suedwest/members?offset=5&only=id%2Cgroup_profile.created&page=200>;
+        rel="next"
+      - <https://api.meetup.com/PyData-Suedwest/members?offset=3&only=id%2Cgroup_profile.created&page=200>;
+        rel="prev"
+      Server:
+      - Apache/2.4.39 (Unix) OpenSSL/1.1.1c
+      Vary:
+      - Accept-Encoding,User-Agent,Accept-Language
+      Via:
+      - 1.1 varnish
+      X-Accepted-OAuth-Scopes:
+      - basic
+      X-Cache:
+      - MISS
+      X-Cache-Hits:
+      - '0'
+      X-Meetup-Request-ID:
+      - 4592b603-0345-4002-9244-4e0f848e35a4
+      X-Meetup-server:
+      - ip-10-192-13-82
+      X-OAuth-Scopes:
+      - basic
+      X-RateLimit-Limit:
+      - '30'
+      X-RateLimit-Remaining:
+      - '27'
+      X-RateLimit-Reset:
+      - '8'
+      X-Served-By:
+      - cache-dub4347-DUB
+      X-Timer:
+      - S1598882329.411944,VS0,VE834
+      X-Total-Count:
+      - '1103'
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Authorization:
+      - XXX
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.24.0
+    method: GET
+    uri: https://api.meetup.com/PyData-Suedwest/members?only=id%2Cgroup_profile.created&offset=5&page=200
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAA41Yy4ocRgz8lzn7IKn1av9KCMHE62AI2CzJyey/pzSGbMsXNctchq1ptVQqlfq3
+        H4+/Xr/9+/2P76/fvnz9++Xx8cfjz9eXT/+8fH58ZFupxJybiN4+PL7iO3HVbbLj7cMEZTc3PqC8
+        ty58OUItiFYcUFZEIS4jMoKEdot3bfyW2gxdSkvzHRrGEbIuDl2IWKkd6syxaYaSqXuH4hIqc35d
+        t5vaCZVNIjtHqNY9rUGZTYPn0ngg3jgDJlvsJPOpHu6Z0e7Kuox4hrJs1PWAmuM7k7k4C7XQPLmU
+        zoS/GephEtt6wLJ3zHV1EEfPuvJm8HLJmGEJWpLa7mqUKnoRsLHQyk4J9owLNnkgvLM4ootcY91A
+        CR1wQBc4AZ7MPVdQzk5/EDPmNJWOrLVP6Cpy0sxhISXbS0/oZtu85rsu5Z+MeK9rrEi/aDqDDDmu
+        9z/UgxX9MJfVcgujsmdZGRqRFz2H7pKuLxAJF7ogE1tYrgZ1DtoXjKBI89bpUlK19gxd4Pqzc96h
+        EOIMvYH60vNUtEKi9y8GTiYUpTfOwrEXE8fJE/166ouCIsEXjMgdmmddi8NqcRFw1Wefd61IFtMs
+        TdB5s90zTAYWjzKM8DhTT0pAcOrQMU2iiYDbjLSFwiqPbJLEGfsUCRaFpknOxVGp4XwUx5BusPgC
+        SY651rSfoBBus6hhGtqz5d55WD8FJZ7lJZ8RHxpBga67yG+5gZV5CpNijvie+2ZV1+hBQ9YyYPtC
+        mVBCT28aQSgsrZmGYpDh1cYcboBuneVFICXqHWoZ66Y2G+Ol07B0Py9mFfMiPRsd7QBZIpkzzFSK
+        fZIJwgqNoBlKIfBI3KCgYcQoL6X06PaWJlUkWca7Cry3YJIeUA1kHTNsDhi6VA7rDJhgOOdTQSOE
+        p2eGcVOC7x9PrQGOeNtdpbaBNUspUX1OFYYYZqCXLqAMCnsXtWU8Nx1cpIISp6glzHBkjCMSupeZ
+        57DCdKRgHDufijZx7neFodl7Fpi9arC1iePlhOb96JkRaT7a4C1g1uY0RQTy26BWwNkMI0lLKA4o
+        1+XxN0NFQcPmJDQdg/mic2CY8M/Z0sSg0wWHazR1+mOMwB/MTgJpolDuOwP8G10QEfNli/6yH+26
+        7Qy1WstO9SesKXBS47oBgYEQZVOJ57bNc5oCMra0cbicpV8Yf0e06LFGRIJEzq8ZtTN4MyECS25l
+        MOdTc6fxeVeoOuzwjYRnPV2crQ5JFN4XTYfVql4gzoDLlcpF03lNjvY8UJ4Ri+UFFITo5rJmTrLO
+        2lR85eynLjXXua41/kkaJRQ/hbV0hlYN2ysKvoBLvDhVHSLRZ049D6zZ56EIEPrmJWoiIOi56SB9
+        SNPJJrg8rKDzpMNyAZ/3y5Ak+OOLwQHSYTqddYWoU3nHGYrpXwedTZf4nmc2gYbbrbEJe69jVF5A
+        sYX1BYlx1cj5rtjmdGffciCHPK+gUt5Xqb15IgrI+pwm5EO7SiDBm/NiNEOu69MWJFgfmq9KWWPi
+        4OHzfe5is8KoCsybg0sQdIK6XigTrcBa3p6a4Bpd5SJe7GVhTdRQUwm6ePQp/8LtdWDj4n51KtfT
+        zXmq1ca8525FLsO6CpPCDF3QEFAM9WZCYGfrbe3t9/8AmHb3ercXAAA=
+    headers:
+      Accept-Ranges:
+      - bytes
+      Connection:
+      - keep-alive
+      Content-Encoding:
+      - gzip
+      Content-Length:
+      - '1238'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Mon, 31 Aug 2020 13:58:51 GMT
+      ETag:
+      - '"fea90ca9a74c74a80bc749dce29a4fc8-gzip"'
+      Link:
+      - <https://api.meetup.com/PyData-Suedwest/members?offset=4&only=id%2Cgroup_profile.created&page=200>;
+        rel="prev"
+      Server:
+      - Apache/2.4.39 (Unix) OpenSSL/1.1.1c
+      Vary:
+      - Accept-Encoding,User-Agent,Accept-Language
+      Via:
+      - 1.1 varnish
+      X-Accepted-OAuth-Scopes:
+      - basic
+      X-Cache:
+      - MISS
+      X-Cache-Hits:
+      - '0'
+      X-Meetup-Request-ID:
+      - ed7b13c1-79b3-484a-944d-3b4fa50a1ac2
+      X-Meetup-server:
+      - ip-10-192-22-155
+      X-OAuth-Scopes:
+      - basic
+      X-RateLimit-Limit:
+      - '30'
+      X-RateLimit-Remaining:
+      - '26'
+      X-RateLimit-Reset:
+      - '6'
+      X-Served-By:
+      - cache-dub4325-DUB
+      X-Timer:
+      - S1598882331.975116,VS0,VE620
+      X-Total-Count:
+      - '1103'
+    status:
+      code: 200
+      message: OK
 version: 1

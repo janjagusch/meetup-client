@@ -13,44 +13,54 @@ interactions:
       User-Agent:
       - python-requests/2.24.0
     method: GET
-    uri: https://api.meetup.com/PyData-Suedwest/members?offset=0&page=200
+    uri: https://api.meetup.com/PyData-Suedwest/events
   response:
     body:
-      string: !!binary |
-        H4sIAAAAAAAAA6tWSi0qyi8qVrKKrlZKzk9JVbJSSiwtyYhPS8zMUdJRyk0tLk5MB4l65pUl5mSm
-        KOSDpBWSi1JTUvNKMhNzipVqY2sBwX8Nn0cAAAA=
+      string: '[]'
     headers:
       Accept-Ranges:
       - bytes
       Connection:
       - keep-alive
-      Content-Encoding:
-      - gzip
       Content-Length:
-      - '86'
+      - '2'
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Mon, 31 Aug 2020 13:58:58 GMT
+      - Mon, 31 Aug 2020 13:58:12 GMT
+      ETag:
+      - '"d751713988987e9331980363e24189ce"'
       Server:
       - Apache/2.4.39 (Unix) OpenSSL/1.1.1c
       Vary:
-      - Accept-Encoding,User-Agent,Accept-Language
+      - User-Agent,Accept-Language
       Via:
       - 1.1 varnish
-      WWW-Authenticate:
-      - OAuth realm="https://api.meetup.com/"
+      X-Accepted-OAuth-Scopes:
+      - basic
       X-Cache:
       - MISS
       X-Cache-Hits:
       - '0'
       X-Meetup-Request-ID:
-      - 565beeb4-2fd9-48ef-b8a6-2426de4fb082
+      - a90cf3c4-2650-4341-9e5d-6b32e39a0129
+      X-Meetup-server:
+      - ip-10-192-3-216
+      X-OAuth-Scopes:
+      - basic
+      X-RateLimit-Limit:
+      - '30'
+      X-RateLimit-Remaining:
+      - '28'
+      X-RateLimit-Reset:
+      - '9'
       X-Served-By:
-      - cache-dub4348-DUB
+      - cache-dub4345-DUB
       X-Timer:
-      - S1598882338.277992,VS0,VE359
+      - S1598882292.392974,VS0,VE424
+      X-Total-Count:
+      - '0'
     status:
-      code: 401
-      message: Unauthorized
+      code: 200
+      message: OK
 version: 1
