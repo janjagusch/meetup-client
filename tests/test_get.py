@@ -11,7 +11,10 @@ from meetup.client.errors import RequestError
 
 @pytest.mark.vcr()
 @pytest.mark.parametrize(
-    "url,kwargs", [("pro/pydata/groups", {"only": "city,country,member_count"})]
+    "url,kwargs",
+    [
+        ("PyData-Suedwest/events", {"status": "past"}),
+    ],
 )
 def test_get_1(meetup_client, url, kwargs):
     res = meetup_client.get(url=url, to_df=True, **kwargs)
@@ -20,7 +23,10 @@ def test_get_1(meetup_client, url, kwargs):
 
 @pytest.mark.vcr()
 @pytest.mark.parametrize(
-    "url,kwargs", [("pro/pydata/groups", {"only": "city,country,member_count"})]
+    "url,kwargs",
+    [
+        ("PyData-Suedwest/events", {"status": "past"}),
+    ],
 )
 def test_get_2(meetup_client, url, kwargs):
     res = meetup_client.get(url=url, to_df=False, **kwargs)
@@ -28,7 +34,12 @@ def test_get_2(meetup_client, url, kwargs):
 
 
 @pytest.mark.vcr()
-@pytest.mark.parametrize("url,kwargs", [("pro/pydata/groups", {})])
+@pytest.mark.parametrize(
+    "url,kwargs",
+    [
+        ("PyData-Suedwest/events", {}),
+    ],
+)
 def test_get_unauthorized(meetup_client_invalid, url, kwargs):
     with pytest.raises(RequestError):
         meetup_client_invalid.get(url=url, **kwargs)

@@ -13,7 +13,7 @@ interactions:
         User-Agent:
           - python-requests/2.24.0
       method: GET
-      uri: https://api.meetup.com/PyData-Suedwest/members?offset=0&page=200
+      uri: https://api.meetup.com/PyData-Suedwest/events
     response:
       body:
         string: !!binary |
@@ -31,7 +31,7 @@ interactions:
         Content-Type:
           - application/json; charset=utf-8
         Date:
-          - Mon, 31 Aug 2020 14:32:02 GMT
+          - Mon, 31 Aug 2020 14:31:46 GMT
         Server:
           - Apache/2.4.39 (Unix) OpenSSL/1.1.1c
         Vary:
@@ -45,11 +45,11 @@ interactions:
         X-Cache-Hits:
           - "0"
         X-Meetup-Request-ID:
-          - 64e66dee-3ec4-4e96-bf78-a7c9946e58bc
+          - b4d3faff-8b73-4337-8f19-89d4e29fb013
         X-Served-By:
-          - cache-dub4320-DUB
+          - cache-dub4330-DUB
         X-Timer:
-          - S1598884322.948214,VS0,VE353
+          - S1598884306.957961,VS0,VE351
       status:
         code: 401
         message: Unauthorized

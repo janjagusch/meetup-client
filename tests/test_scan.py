@@ -12,7 +12,11 @@ from meetup.client.errors import RequestError
 
 @pytest.mark.vcr()
 @pytest.mark.parametrize(
-    "url,kwargs", [("PyData-Suedwest/members", {"only": "id,group_profile.created"})]
+    "url,kwargs",
+    [
+        ("PyData-Suedwest/members", {"only": "id,group_profile.created"}),
+        ("PyData-Suedwest/events", {"status": "past"}),
+    ],
 )
 def test_scan_1(meetup_client, url, kwargs):
     assert inspect.isgeneratorfunction(meetup_client.scan)
@@ -22,7 +26,11 @@ def test_scan_1(meetup_client, url, kwargs):
 
 @pytest.mark.vcr()
 @pytest.mark.parametrize(
-    "url,kwargs", [("PyData-Suedwest/members", {"only": "id,group_profile.created"})]
+    "url,kwargs",
+    [
+        ("PyData-Suedwest/members", {"only": "id,group_profile.created"}),
+        ("PyData-Suedwest/events", {"status": "past"}),
+    ],
 )
 def test_scan_2(meetup_client, url, kwargs):
     assert inspect.isgeneratorfunction(meetup_client.scan)

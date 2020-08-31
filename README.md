@@ -6,35 +6,21 @@ A Python client for the [Meetup API](https://www.meetup.com/meetup_api/) that su
 
 ## Installation
 
-### Dependencies
-
-For more information, please take a look at the `tool.poetry.dependencies` section in `pyproject.toml`.
-
-### User Installation
-
-#### PIP
-
 ```
 pip install meetup-client
 ```
 
-#### Poetry
-
-```
-poetry add meetup-client
-```
-
 ## Getting Started
 
-**Note**: meetup-client only supports OAuth 2 authentification with server flow without user credentials. To create an access token, follow the instructions [here](https://www.meetup.com/meetup_api/auth/#oauth2).
+**Note**: meetup-client only supports OAuth 2 authentification with server flow without user credentials. To create an access token, follow the instructions [here](https://www.meetup.com/meetup_api/auth/#oauth2). This project is designed to be compatible with [meetup-token-manager](https://github.com/janjagusch/meetup-token-manager), which can help you creating and storing API tokens.
 
-Next, you can create a `MeetupClient` instance as follows:
+Next, you can create a `Client` instance as follows:
 
 ```python
-from meetup_api.client import MeetupClient
+from meetup.client import Client
 
-meetup_client = MeetupClient(
-    access_token=<YOUR ACCESS TOKEN>,
+meetup_client = Client(
+    access_token=<YOUR ACCESS TOKEN>, # Also accepts a callable, like lambda: token_manager.token().access_token
 )
 ```
 
